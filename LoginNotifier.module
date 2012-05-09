@@ -179,14 +179,14 @@ class LoginNotifier extends WireData implements Module, ConfigurableModule {
 		$field->attr('name', 'notifyBody'); 
 		$field->attr('value', $data['notifyBody']);
 		$field->label = "Email body";
-		$field->description = "You may include any user fields in the email by entering the field like this: {name}. " . $description; 
+		$field->description = "You may include any user fields in the email by entering the field like this: {name}. "; 
 		$fields->append($field);
 
 		$field = $modules->get("InputfieldURL");
 		$field->attr('name', 'pingUrl');
 		$field->attr('value', $data['pingUrl']);
 		$field->label = "URL to ping when login occurs";
-		$field->description = "You may include any user fields as GET vars by entering the field like this: {name}. " . $description;
+		$field->description = "You may include any user fields as GET vars by entering the field like this: {name}. ";
 		$field->notes = "Example: http://company.com/login/occurred/?username={name}";
 		if(!(int) ini_get('allow_url_fopen')) $field->error("Your PHP doesn't have 'allow_url_fopen' enabled, so the ping URL option won't be possible.");
 		$fields->append($field);
@@ -194,7 +194,7 @@ class LoginNotifier extends WireData implements Module, ConfigurableModule {
 		$field = $modules->get("InputfieldText"); 
 		$field->attr('name', 'logEntry'); 
 		$field->attr('value', $data['logEntry']); 
-		$field->label = "Log entry in " . wire('config')->paths->logs . get_class($this) . ".txt";
+		$field->label = "Log entry in " . wire('config')->paths->logs . (__CLASS__) . ".txt";
 		$fields->append($field);
 
 		return $fields;
