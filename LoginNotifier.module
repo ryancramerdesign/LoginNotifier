@@ -194,7 +194,7 @@ class LoginNotifier extends WireData implements Module, ConfigurableModule {
 		$field = $modules->get("InputfieldText"); 
 		$field->attr('name', 'logEntry'); 
 		$field->attr('value', $data['logEntry']); 
-		$field->label = "Log entry in " . wire('config')->paths->logs . get_class($this) . ".txt";
+		$field->label = "Log entry in " . wire('config')->paths->logs . "LoginNotifier.txt";
 		$fields->append($field);
 
 		return $fields;
