@@ -7,9 +7,8 @@ To install, place this file at /site/modules/LoginNotifier.module
 After you click the install button in Admin > Modules, you will get a configuration screen. 
 
 ProcessWire 2.x 
-Copyright (C) 2011 by Ryan Cramer 
+Copyright (C) 2013 by Ryan Cramer 
 Licensed under GNU/GPL v2
 
-http://www.processwire.com
-http://www.ryancramer.com
+http://processwire.com
 
